@@ -12,7 +12,7 @@ export const Form = ({defaultValue,onSubmit,className, id,onChange} ) => {
                     value={defaultValue}
                     id={id}
                     onChange={onChange}
-                    className={'hydrate-test-field'}
+                    className={'isoblock-field'}
                 />
             </div>
         </form>

@@ -6,7 +6,7 @@ import {useState, createContext, useContext} from '@wordpress/element';
  * All DOM elements with block
  * @type {NodeListOf<Element>}
  */
-const elements = document.querySelectorAll('.wp-block-hydrate-test');
+const elements = document.querySelectorAll('.wp-block-josh-isoblock');
 
 /**
  * Create a context
@@ -70,7 +70,7 @@ function FormDataDisplayConsumer() {
 if (elements.length) {
     elements.forEach(element => {
         //Find the input
-        const input = element.querySelector('.hydrate-test-field');
+        const input = element.querySelector('.isoblock-field');
         //Find default value
         const defaultValue = null !== input ? input.value : 'Hi Roy';
         //Find the input ID attribute

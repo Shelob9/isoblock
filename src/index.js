@@ -13,9 +13,9 @@ const attributes = {
         type: 'string'
     }
 };
-const name = 'hydrate/test';
+const name = 'josh/isoblock';
 registerBlockType(name,{
-    title: 'Hydrate Test',
+    title: 'Hydrate Demo',
     attributes,
     category: 'common',
     edit({attributes,setAttributes,className,clientId}){

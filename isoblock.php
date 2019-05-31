@@ -8,9 +8,9 @@
  * Load block
  */
 add_action( 'init', function() {
-    $block = new WP_Block_Type( 'hydrate/test' ,[]);
-    $block->editor_script = 'hydrate-test-editor';
-    $block->script = 'hydrate-test-front';
+    $block = new WP_Block_Type( 'josh/isoblock' ,[]);
+    $block->editor_script = 'isoblock-editor';
+    $block->script = 'isoblock-front';
 
     wp_register_script(
         $block->editor_script,
