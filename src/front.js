@@ -22,14 +22,26 @@ const {Provider} = FormContext;
  * Provide data for the form
  */
 function FormProvider({initalValue, children}) {
+    //State management for the one form field
     const [defaultValue, setValue] = useState(initalValue);
+    //Change handler to pass down to inputs
     const onChange = (event) => {
+        event.preventDefault();
         setValue(event.target.value)
     };
+
+    //Submit handler to pass down to form
+    const onSubmit = (event) => {
+        console.log(event);
+        event.preventDefault();
+        alert('Form Submitted!');
+    };
+
     return (
         <Provider value={{
             defaultValue,
-            onChange
+            onChange,
+            onSubmit
         }}>
             {children}
         </Provider>
@@ -38,15 +50,21 @@ function FormProvider({initalValue, children}) {
 
 /**
  * Form wrapped in context
- *
  */
 const FormDataUpdateConsumer = ({id}) => {
+    //Get everything from context
     const {
         defaultValue,
-        onChange
+        onChange,
+        onSubmit
     } = useContext(FormContext);
     return (
-        <Form defaultValue={defaultValue} onChange={onChange} id={id}/>
+        <Form
+            defaultValue={defaultValue}
+            onChange={onChange}
+            onSubmit={onSubmit}
+            id={id}
+        />
     );
 
 };
@@ -55,6 +73,7 @@ const FormDataUpdateConsumer = ({id}) => {
  * Show form value with context
  */
 function FormDataDisplayConsumer() {
+    //Get the value from context
     const {
         defaultValue,
     } = useContext(FormContext);
@@ -75,6 +94,7 @@ if (elements.length) {
         const defaultValue = null !== input ? input.value : 'Hi Roy';
         //Find the input ID attribute
         const id = null !== input ? input.id : 'hi-roy';
+        //Recreate app
         hydrate(
             <FormProvider initalValue={defaultValue}>
                 <FormDataUpdateConsumer id={id}/>
