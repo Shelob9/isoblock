@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Plugin
+ * Plugin Name: Hydrate Test
  */
 
 
-
+/**
+ * Load block
+ */
 add_action( 'init', function() {
-
-
     $block = new WP_Block_Type( 'hydrate/test' ,[]);
     $block->editor_script = 'hydrate-test-editor';
     $block->script = 'hydrate-test-front';
@@ -26,7 +26,6 @@ add_action( 'init', function() {
         md5_file( __DIR__ . '/build/front.js' ),
         true
     );
-
 
     register_block_type( $block );
 } );

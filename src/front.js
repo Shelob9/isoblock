@@ -1,5 +1,5 @@
 import {hydrate} from 'react-dom';
-import {Form} from "./componets/Form";
+import {Form} from "./components/Form";
 import {useState, createContext, useContext} from '@wordpress/element';
 
 /**
@@ -20,13 +20,8 @@ const {Provider} = FormContext;
 
 /**
  * Provide data for the form
- *
- * @param initalValue
- * @param children
- * @returns {*}
- * @constructor
  */
-function FormDataProvider({initalValue, children}) {
+function FormProvider({initalValue, children}) {
     const [defaultValue, setValue] = useState(initalValue);
     const onChange = (event) => {
         setValue(event.target.value)
@@ -44,11 +39,8 @@ function FormDataProvider({initalValue, children}) {
 /**
  * Form wrapped in context
  *
- * @param id
- * @returns {*}
- * @constructor
  */
-const FormConsuming = ({id}) => {
+const FormDataUpdateConsumer = ({id}) => {
     const {
         defaultValue,
         onChange
@@ -61,10 +53,8 @@ const FormConsuming = ({id}) => {
 
 /**
  * Show form value with context
- * @returns {*}
- * @constructor
  */
-function DisplayConsuming() {
+function FormDataDisplayConsumer() {
     const {
         defaultValue,
     } = useContext(FormContext);
@@ -75,19 +65,22 @@ function DisplayConsuming() {
 }
 
 /**
- * If we have any blocks hydrate ssr HTML
+ * If we have any blocks hydrate the server-side renderered HTML
  */
 if (elements.length) {
     elements.forEach(element => {
+        //Find the input
         const input = element.querySelector('.hydrate-test-field');
+        //Find default value
         const defaultValue = null !== input ? input.value : 'Hi Roy';
+        //Find the input ID attribute
         const id = null !== input ? input.id : 'hi-roy';
         hydrate(
-            <FormDataProvider initalValue={defaultValue}>
-                <FormConsuming id={id}/>
-                <DisplayConsuming/>
-            </FormDataProvider>
-            , element
+            <FormProvider initalValue={defaultValue}>
+                <FormDataUpdateConsumer id={id}/>
+                <FormDataDisplayConsumer/>
+            </FormProvider>
+            ,element
         );
     })
 

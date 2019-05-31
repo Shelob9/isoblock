@@ -1,4 +1,6 @@
-
+/**
+ * The Form component
+ */
 export const Form = ({defaultValue,onSubmit,className, id,onChange} ) => {
     return (
         <form onSubmit={onSubmit} className={className}>

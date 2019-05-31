@@ -1,6 +1,6 @@
 import {registerBlockType} from '@wordpress/blocks';
 import {InspectorControls} from '@wordpress/editor'
-import {Form} from "./componets/Form";
+import {Form} from "./components/Form";
 import {TextControl} from '@wordpress/components';
 
 const attributes = {
