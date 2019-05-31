@@ -1,0 +1,25 @@
+{
+  "name": "plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "@wordpress/scripts": "^3.2.1"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses --production",
+    "lint:css": "wp-scripts lint-style '**/*.css'",
+    "lint:js": "wp-scripts lint-js .",
+    "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "start": "wp-scripts start",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "dependencies": {
+    "@wordpress/blocks": "^6.3.0",
+    "@wordpress/editor": "^9.2.6",
+    "@wordpress/element": "^2.4.0"
+  }
+}
