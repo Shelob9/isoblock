@@ -34,7 +34,15 @@ registerBlockType(name,{
                         value={defaultValue}
                     />
                 </InspectorControls>
-                <Form defaultValue={defaultValue} className={className} id={clientId}/>
+                <Form
+                    defaultValue={defaultValue}
+                    className={className}
+                    id={clientId}
+                    onChange={(event) => {
+                        console.log(event);
+                        setDefaultValue(event.target.value);
+                    }}
+                />
             </div>
         )
     },
