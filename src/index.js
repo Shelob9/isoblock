@@ -49,11 +49,7 @@ registerBlockType(name,{
     save(props){
         const {attributes,className,clientId} = props;
         const {defaultValue,blockId} = attributes;
-        return  <Form
-            defaultValue={defaultValue}
-            className={className}
-            id={blockId}
-        />
+        return  <Form defaultValue={defaultValue} className={className} id={blockId} />
     }
 
 });
