@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component 1`] = `
+<form
+  className="wp-blocks-tooths"
+>
+  <div>
+    <label
+      htmlFor="something"
+    >
+      Form Field
+    </label>
+    <input
+      className="isoblock-field"
+      id="something"
+      value="Tooths"
+    />
+  </div>
+</form>
+`;
