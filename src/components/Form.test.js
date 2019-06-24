@@ -1,6 +1,3 @@
-//
-import React from "react";
-
 //Import component to test
 import { Form } from "./Form";
 
@@ -12,7 +9,7 @@ test("Form component", () => {
   const props = {
     defaultValue: "Tooths",
     className: "wp-blocks-tooths",
-    id: "something",
+    id: "something"
   };
 
   const component = TestRenderer.create(<Form {...props} />);

@@ -1,5 +1,5 @@
 import { registerBlockType } from "@wordpress/blocks";
-import { InspectorControls } from "@wordpress/editor";
+import { InspectorControls } from "@wordpress/block-editor";
 import { Form } from "./components/Form";
 import { TextControl } from "@wordpress/components";
 
