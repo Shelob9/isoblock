@@ -1,6 +1,16 @@
 version: "3.1"
 
 services:
+  webapp:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8123:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DEBUG: 1
+      ABSPATH: /usr/src/wordpress/
   wordpress:
     image: wordpress
     ports:
