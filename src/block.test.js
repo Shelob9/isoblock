@@ -1,13 +1,9 @@
-import { createElement } from "@wordpress/element";
+//Fucntions to test:
 import { save, edit } from "./index";
 //Import a renderer to test with
 import TestRenderer from "react-test-renderer";
-
-/**
- *
- * @param {*} props
- */
-const TheEdit = props => createElement(edit, props);
+//We will use this to make edit/save rendereable
+import { createElement } from "@wordpress/element";
 
 test("Block edit callback", () => {
   //Props with sample data
@@ -39,3 +35,4 @@ test("Block save callback", () => {
   const component = TestRenderer.create(createElement(save, props));
   expect(component.toJSON()).toMatchSnapshot();
 });
+

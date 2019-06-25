@@ -1,6 +1,5 @@
 //Import component to test
 import { Form } from "./Form";
-
 //Import a renderer to test with
 import TestRenderer from "react-test-renderer";
 
