@@ -15,7 +15,7 @@ services:
         define( 'SCRIPT_DEBUG', true );
     volumes:
       - wordpress_data:/var/www/html
-      - ../:/var/www/html/wp-content/plugins/isoblock
+      - ./:/var/www/html/wp-content/plugins/isoblock
       - mysql
 
   cli:
@@ -24,7 +24,7 @@ services:
     user: xfs
     volumes:
       - wordpress_data:/var/www/html
-      - ../:/var/www/html/wp-content/plugins/isoblock
+      - ./:/var/www/html/wp-content/plugins/isoblock
     depends_on:
       - mysql
       - wordpress

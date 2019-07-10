@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button can jump focus back & forth 1`] = `
+"<!-- wp:josh/isoblock {\\"blockId\\":\\"5a2065d8-9d9a-434e-80f8-9c0823dc92c0\\"} -->
+<form class=\\"wp-block-josh-isoblock\\"><div><label for=\\"5a2065d8-9d9a-434e-80f8-9c0823dc92c0\\">Form Field</label><input value=\\"Default Default Value\\" id=\\"5a2065d8-9d9a-434e-80f8-9c0823dc92c0\\" class=\\"isoblock-field\\"/></div></form>
+<!-- /wp:josh/isoblock -->"
+`;
