@@ -1487,6 +1487,17 @@
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.11"
 
+"@wordpress/e2e-test-utils@^2.1.0":
+  version "2.1.0"
+  resolved "http://localhost:4873/@wordpress%2fe2e-test-utils/-/e2e-test-utils-2.1.0.tgz#d52d26bf33fe0ae310b8fef9efcaa36e7477ebc2"
+  integrity sha512-dpa+IyjkocEvKh9g7+NLxWFbUvCAc5KYZreaMULJLxEivs76ts+rFen9l4gbH4v0rk6IInexLdP1muKqfYKpWg==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@wordpress/keycodes" "^2.4.0"
+    "@wordpress/url" "^2.6.0"
+    lodash "^4.17.11"
+    node-fetch "^1.7.3"
+
 "@wordpress/editor@^9.2.6":
   version "9.4.0"
   resolved "http://localhost:4873/@wordpress%2feditor/-/editor-9.4.0.tgz#7d02d7ff02309876db4958c3d13a79a29059140d"
@@ -6452,7 +6463,7 @@ nice-try@^1.0.4:
   resolved "http://localhost:4873/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-node-fetch@^1.0.1:
+node-fetch@^1.0.1, node-fetch@^1.7.3:
   version "1.7.3"
   resolved "http://localhost:4873/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==

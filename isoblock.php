@@ -16,7 +16,6 @@ add_action('init', function () {
     $block->script = str_replace('/', '-', $name);
     $block->editor_script = str_replace('/', '-', $name) . '-editor';
 
-
     //Register script
     if (!empty($blockConfig['script'])) {
         //setting this prop, causes script to be enqueued with block
@@ -69,7 +68,6 @@ add_action('init', function () {
             true
         );
     }
-
 
     register_block_type($block);
 });
